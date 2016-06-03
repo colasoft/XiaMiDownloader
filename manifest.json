@@ -1,0 +1,28 @@
+{
+	"name": "GetXiaMi",
+	"version": "1.0",
+	"manifest_version":2,
+	"description": "XiaMi Musice Downloader.",
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup":"popup.html"
+	},
+	"content_scripts": [
+		{
+		"matches": ["http://www.xiami.com/*"],
+		"css": ["mystyles.css"],
+		"js": ["jquery.js","myscript.js"]
+		}
+	],
+   "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"tabs",
+		"<all_urls>"
+	]
+}
